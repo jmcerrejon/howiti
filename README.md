@@ -17,7 +17,7 @@ Site: https://howiti.com/
 -   DB: MongoDB.
 -   Linter: Ruff.
 -   Other tech: Docker, GitHub Copilot, Hanko, [uv](https://astral.sh/blog/uv), VSCode, [FastCRUD](https://medium.com/@igorbenav/prototyping-fastapi-faster-with-fastcrud-5676a0499e97).
--   Optional: LLM, Ollama.
+-   Optional: LLM, Ollama, [Orbstack](https://orbstack.dev/), [Playwright](https://playwright.dev/)
 
 ## TODO
 
@@ -60,6 +60,12 @@ This project uses _PyTest_ for testing. To run tests, execute on root directory 
 ## Tips
 
 -   You can see the docs through the Swagger(http://127.0.0.1:8000/docs) or ReDoc(http://127.0.0.1:8000/redoc) endpoint.
+
+## Interesting links
+
+-   https://python.plainenglish.io/fastapi-project-setup-with-scalability-in-mind-3daef823ed83
+-   https://levelup.gitconnected.com/fastapi-pagination-limits-and-limitations-f1020bcc3ef4
+-   https://medium.com/@simeon.emanuilov/the-evolution-of-fastapi-pydantic-models-for-query-header-and-cookie-parameters-version-0-115-0-0d7e138c5dd4
 
 ## License and credits
 
