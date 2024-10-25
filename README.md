@@ -34,6 +34,7 @@ Site: https://howiti.com/
 ## Installation & use
 
 -   Clone the repo using `git clone https://github.com/jmcerrejon/howiti.git`.
+-   Rename/Copy .env.example to .env and fill the variables.
 -   Install the dependencies with `pip install -r requirements.txt --no-cache-dir`.
 -   Run the `tools/recreate_db.py` script to create the database.
 -   For developer mode, run the app with `fastapi dev main.py`. For production use: `fastapi run`
@@ -44,7 +45,13 @@ Site: https://howiti.com/
 
 If you are a _Mac/Linux_ user, I recommend you https://orbstack.dev/ to manage your _Docker_ containers.
 
-You have a containerized version of the app. To build the image, run `docker build -t howiti .` and to run it, `docker run -d -p 8000:8000 howiti`. You can use `docker-compose up --build` as well.
+You have a containerized version of the app. To build the image, run:
+
+```sh
+docker build -t howiti .
+docker run -d -p 8000:8000 howiti
+# docker-compose up --build is an alternative
+```
 
 ## Testing
 
@@ -52,12 +59,14 @@ This project uses _PyTest_ for testing. To run tests, execute on root directory 
 
 ## Tips
 
--   You can see the docs through the [Swagger](http://127.0.0.1:8000/docs) or [ReDoc](http://127.0.0.1:8000/redoc) endpoint.
+-   You can see the docs through the Swagger(http://127.0.0.1:8000/docs) or ReDoc(http://127.0.0.1:8000/redoc) endpoint.
 
 ## License and credits
 
-Howiti is a project made with ♥ by Jose Cardenas (WordPress, SEO) & Jose Cerrejon(Back/Frontend) (Read the [GPL-3.0 License](LICENSE)).
+Read the [GPL-3.0 License](LICENSE).
 
 We are using _Conventional Commits v1.0.0_. More information can be found at https://www.conventionalcommits.org/en/v1.0.0/.
 
 This repository is hosted at _GitHub_. You can find the repository at https://github.com/jmcerrejon/howiti
+
+Howiti is a project made with ♥ by Jose Cardenas (WordPress, SEO) & Jose Cerrejon(Back/Frontend).
