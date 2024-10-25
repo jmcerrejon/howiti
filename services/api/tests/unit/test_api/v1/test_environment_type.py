@@ -1,6 +1,6 @@
 import unittest
 
-from main import EnvironmentType
+from schemas import EnvironmentType
 
 
 class TestEnvironmentType(unittest.TestCase):
