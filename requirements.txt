@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pytest
+pytest-cov
+pydantic-settings
+bandit
+qrcode
+Pillow
+sqlalchemy
