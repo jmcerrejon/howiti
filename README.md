@@ -48,8 +48,7 @@ If you are a _Mac/Linux_ user, I recommend you https://orbstack.dev/ to manage y
 You have a containerized version of the app. To build the image, run:
 
 ```sh
-docker build -t howiti .
-docker run -d -p 8000:8000 howiti
+docker build -t howiti . && docker run -d -p 8000:8000 howiti
 # docker-compose up --build is an alternative
 ```
 
@@ -77,8 +76,8 @@ Both _Uvicorn_ and _Gunicorn_ are popular for running _APIs_ with _FastAPI_, but
 However, to get the best of both worlds, it’s common to use _Gunicorn_ in combination with _Uvicorn_ (via uvicorn.workers.UvicornWorker), resulting in a powerful server with greater control over processes, and more suited for complex production scenarios. Check the next examples about how to use them:
 
 ```dockerfile
-CMD ["uvicorn", "app.main:app", "--proxy-headers", "--port", "8000", "--workers", "4", "--restart"]
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "app.main:app", "--workers", "4", "--bind", "0.0.0.0:80"]
+CMD ["uvicorn", "main:app", "--proxy-headers", "--port", "8000", "--workers", "4", "--restart"]
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--workers", "4", "--bind", "0.0.0.0:8000"]
 ```
 
 ## License and credits
