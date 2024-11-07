@@ -1,9 +1,10 @@
+bandit
 fastapi
-uvicorn
+gunicorn
+Pillow
+pydantic-settings
 pytest
 pytest-cov
-pydantic-settings
-bandit
 qrcode
-Pillow
 sqlalchemy
+uvicorn

@@ -67,6 +67,20 @@ This project uses _PyTest_ for testing. To run tests, execute on root directory 
 -   https://levelup.gitconnected.com/fastapi-pagination-limits-and-limitations-f1020bcc3ef4
 -   https://medium.com/@simeon.emanuilov/the-evolution-of-fastapi-pydantic-models-for-query-header-and-cookie-parameters-version-0-115-0-0d7e138c5dd4
 
+## Uvicorn vs. Gunicorn
+
+Both _Uvicorn_ and _Gunicorn_ are popular for running _APIs_ with _FastAPI_, but they have differences in process management:
+
+-   _Uvicorn_ is a lightweight and efficient _ASGI server_, ideal for simple, smaller-scale scenarios.
+-   _Gunicorn_, on the other hand, is a more robust _WSGI server_ that can manage multiple processes more efficiently, especially in large-scale production environments. It also offers additional features like better worker control and automatic failure recovery, making it more suitable for high-availability scenarios.
+
+However, to get the best of both worlds, it’s common to use _Gunicorn_ in combination with _Uvicorn_ (via uvicorn.workers.UvicornWorker), resulting in a powerful server with greater control over processes, and more suited for complex production scenarios. Check the next examples about how to use them:
+
+```dockerfile
+CMD ["uvicorn", "app.main:app", "--proxy-headers", "--port", "8000", "--workers", "4", "--restart"]
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "app.main:app", "--workers", "4", "--bind", "0.0.0.0:80"]
+```
+
 ## License and credits
 
 Read the [GPL-3.0 License](LICENSE).

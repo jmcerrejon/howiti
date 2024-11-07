@@ -1,13 +1,14 @@
 version: "3.9"
 services:
-    fastapi_app:
+    app:
         build:
             context: .
             dockerfile: Dockerfile
-        container_name: howiti_app_container
+        container_name: howiti_app
         ports:
             - "8000:8000"
         volumes:
             - ./app:/app
+        restart: always
         environment:
             - ENV=development
