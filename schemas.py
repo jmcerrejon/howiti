@@ -9,6 +9,12 @@ class UserType(str, Enum):
     ADMIN = "admin"
 
 
+class EnvironmentType(str, Enum):
+    LOCAL = "local"
+    DEVELOPMENT = "development"
+    PRODUCTION = "production"
+
+
 class QR(BaseModel):
     """
     Model representing a QR's information.

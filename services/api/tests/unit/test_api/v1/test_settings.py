@@ -2,7 +2,8 @@ import os
 
 import pytest
 
-from main import EnvironmentType, Settings
+from main import Settings
+from schemas import EnvironmentType
 
 
 class TestSettings:

@@ -1,20 +1,14 @@
 import os
-from enum import Enum
 
 from fastapi import FastAPI
 from pydantic import ConfigDict
 from pydantic_settings import BaseSettings
 
+from schemas import EnvironmentType
 from services.api.v1.qr_router import qr_router
 
 QR_ROUTER_PREFIX = "/api/v1"
 QR_DEFAULT_PATH = "qr"
-
-
-class EnvironmentType(str, Enum):
-    LOCAL = "local"
-    DEVELOPMENT = "development"
-    PRODUCTION = "production"
 
 
 class Settings(BaseSettings):
