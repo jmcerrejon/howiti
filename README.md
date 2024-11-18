@@ -48,7 +48,7 @@ If you are a _Mac/Linux_ user, I recommend you https://orbstack.dev/ to manage y
 You have a containerized version of the app. To build the image, run:
 
 ```sh
-docker build -t howiti . && docker run -d -p 8000:8000 howiti
+docker build -t howiti . && docker run -d -p 8000:8000 --name howiti-container howiti
 # docker-compose up --build is an alternative
 ```
 
