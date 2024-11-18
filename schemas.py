@@ -1,7 +1,7 @@
 from enum import Enum
 
 from fastapi import Path
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class UserType(str, Enum):
@@ -21,7 +21,7 @@ class QR(BaseModel):
     """
 
     id: str = Path(..., title="ID", description="QR ID")
-    email: str = Path(
+    email: EmailStr = Path(
         ...,
         title="Email",
         description="Email of the user",
